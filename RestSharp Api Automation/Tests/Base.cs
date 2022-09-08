@@ -5,22 +5,24 @@ using AventStack.ExtentReports.Reporter;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using RestSharp_Api_Automation.Drivers;
+using RestSharp_Api_Automation.StepDefinitions;
 
 namespace RestSharp_Api_Automation.Tests;
 
-public class BaseTest
+public class Base
 {
-    public Api _api = new();
-    public ExtentReports _extent;
-    public ExtentTest _test;
+    protected readonly Api _api = new();
+    private ExtentReports? _extent;
+    private ExtentTest? _test;
 
     [OneTimeSetUp]
     protected void OneTimeSetUp()
     {
-        var path = System.Reflection.Assembly.GetCallingAssembly().CodeBase;
-        var actualPath = path?.Substring(0, path.LastIndexOf("bin", StringComparison.Ordinal));
-        var projectPath = new Uri(actualPath ?? throw new InvalidOperationException()).LocalPath;
-        Directory.CreateDirectory(projectPath.ToString() + "Reports");
+        
+        string projectPath = Path.GetFullPath(@"..\..\..\");
+        if (!Directory.Exists(projectPath.ToString() + "Reports"))
+            Directory.CreateDirectory(projectPath.ToString() + "Reports");
+        
         var reportPath = projectPath + "Reports\\ExtentReport.html";
         var htmlReporter = new ExtentHtmlReporter(reportPath);
         _extent = new ExtentReports();
@@ -33,7 +35,7 @@ public class BaseTest
     [SetUp]
     public void Setup()
     {
-        _test = _extent.CreateTest(TestContext.CurrentContext.Test.Name);
+        _test = _extent?.CreateTest(TestContext.CurrentContext.Test.Name);
         _api.baseUrl = "https://petstore.swagger.io/v2";
     }
     
@@ -51,7 +53,7 @@ public class BaseTest
             case TestStatus.Failed:
                 logStatus = Status.Fail;
                 DateTime time = DateTime.Now;
-                _test.Log(Status.Fail, "Fail");
+                _test?.Log(Status.Fail, "Fail");
                 break;
             case TestStatus.Inconclusive:
                 logStatus = Status.Warning;
@@ -63,7 +65,7 @@ public class BaseTest
                 logStatus = Status.Pass;
                 break;
         }
-        _test.Log(logStatus, "Test ended with: |||||->" + logStatus +"<-|||| Stacktrace: "+ stackTrace);
+        _test?.Log(logStatus, "Test ended with: |||||->" + logStatus +"<-|||| Stacktrace: "+ stackTrace);
         //_extent.Flush();
     }
     
@@ -71,7 +73,7 @@ public class BaseTest
     [OneTimeTearDown]
     protected void OneTimeTearDown()
     {
-        _extent.Flush();
+        _extent?.Flush();
     }
     
     
