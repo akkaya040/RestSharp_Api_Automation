@@ -5,8 +5,9 @@ using RestSharp;
 
 namespace RestSharp_Api_Automation.Drivers;
 
-public class Api
+public class Api : IDisposable
 {
+    private bool _isDisposed;
     public RestClient? restClient { get; set; }
     public RestRequest? restRequest { get; set; }
     public RestResponse? restResponse { get; set; }
@@ -94,5 +95,13 @@ public class Api
         responseString = restResponse.Content;
         return restResponse;
     }
-    
+
+    public void Dispose()
+    {
+        if (_isDisposed)
+        {
+            return;
+        }
+        _isDisposed = true;
+    }
 }
