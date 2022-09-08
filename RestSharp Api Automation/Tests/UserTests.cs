@@ -1,19 +1,11 @@
 using NUnit.Framework;
-using RestSharp_Api_Automation.Drivers;
 
-namespace RestSharp_Api_Automation;
+namespace RestSharp_Api_Automation.Tests;
 
-public class Tests
+[TestFixture]
+public class UserTests: BaseTest
 {
     
-    private Api _api = new();
-    
-    [SetUp]
-    public void Setup()
-    {
-        _api.baseUrl = "https://petstore.swagger.io/v2";
-    }
-
     [Test]
     public void Test1()
     {
@@ -31,7 +23,7 @@ public class Tests
         _api.GetRequest(_api.endPoint);
         var responseString = _api.responseString;
         
-        Assert.Pass();
+        Assert.Fail();
     }   
     [Test]
     public void Test3()
@@ -45,10 +37,5 @@ public class Tests
     
     
 
-    [TearDown]
-    public void Stop()
-    {
-        _api.baseUrl = "";
-        _api.Dispose();
-    }
+    
 }
