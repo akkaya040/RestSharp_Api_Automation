@@ -29,9 +29,7 @@ public class UserTests: Base
         _api.restRequest.AddParameter("application/json", jsonString,  ParameterType.RequestBody);
         _api.restResponse = _api.restClient.ExecutePostAsync(_api.restRequest).GetAwaiter().GetResult();
         Assert.AreEqual(200,(int)_api.restResponse!.StatusCode);
-
-         
-        _api.responseString = _api.restResponse.Content;
+        
     }
     
     [Order(2)]

@@ -49,7 +49,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">08-Sep-22 23:01:23</span>
+                    <span class="badge badge-primary">08-Sep-22 23:41:03</span>
                 </a>
             </li>
         </ul>
@@ -104,7 +104,7 @@
 						<i class="fa fa-exclamation-circle"></i>
 					</a>
 					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-						<a status="fail" class="dropdown-item" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>																														<div class="dropdown-divider"></div>
+<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>																																				<div class="dropdown-divider"></div>
 						<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 					</ul>
 				</li>
@@ -112,25 +112,25 @@
         </div>
         <div class="test-list-wrapper scrollable">
             <ul class="test-list-item">
-					<li class="test-item" status="fail" author="" device="" tag="" test-id="1"> 
-						<div class="status-avatar fail-bg">
-							<i class="fa fa-times text-white"></i>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="7"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
 						</div>
 						<div class="open-test">
 							<div class="test-detail"> 
-								<p class="name">DeleteUserByUsername3("///")</p> 
-								<p class="duration text-sm">0h:0m:0s+801ms</p> 
-								<span class="datetime">23:01:23 PM</span>
+								<p class="name">CreatingAUser</p> 
+								<p class="duration text-sm">0h:0m:0s+652ms</p> 
+								<span class="datetime">23:41:03 PM</span>
 							</div>
 						</div>
 						<div class="test-contents d-none">
 							<div class="detail-head">
 								<div class="p-v-10 d-inline-block">	
 									<div class="info">
-										<h5 class="test-status text-fail">DeleteUserByUsername3("///")</h5>
-										<span class='badge badge-success'>08-Sep-22 23:01:23</span>
-										<span class='badge badge-danger'>08-Sep-22 23:01:24</span>
-										<span class='badge badge-default'>0h:0m:0s+801ms</span>
+										<h5 class="test-status text-pass">CreatingAUser</h5>
+										<span class='badge badge-success'>08-Sep-22 23:41:03</span>
+										<span class='badge badge-danger'>08-Sep-22 23:41:04</span>
+										<span class='badge badge-default'>0h:0m:0s+652ms</span>
 									</div>
 																	</div>
 							</div>
@@ -144,16 +144,225 @@
 	</tr></thead>
 	<tbody>
 			<tr class="event-row">
-				<td><i class="fa fa-times text-fail"></i></td>
-				<td>23:01:24</td>
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>23:41:04</td>
 				<td>
-Fail									</td>
+Test ended with: |||||->Pass<-|||| Stacktrace:									</td>
 			</tr>
+	</tbody>
+</table>
+
+</div>    
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="8"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">CreatingAUserWithGivenParams("kurtulus","akkaya","kurtulusakkaya")</p> 
+								<p class="duration text-sm">0h:0m:0s+604ms</p> 
+								<span class="datetime">23:41:04 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">CreatingAUserWithGivenParams("kurtulus","akkaya","kurtulusakkaya")</h5>
+										<span class='badge badge-success'>08-Sep-22 23:41:04</span>
+										<span class='badge badge-danger'>08-Sep-22 23:41:04</span>
+										<span class='badge badge-default'>0h:0m:0s+604ms</span>
+									</div>
+																	</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
 			<tr class="event-row">
-				<td><i class="fa fa-times text-fail"></i></td>
-				<td>23:01:24</td>
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>23:41:04</td>
 				<td>
-Test ended with: |||||->Fail<-|||| Stacktrace:    at RestSharp_Api_Automation.Tests.UserTests.DeleteUserByUsername3(String username) in C:\Projects\Rider\RestSharp Api Automation\RestSharp Api Automation\Tests\UserTests.cs:line 134									</td>
+Test ended with: |||||->Pass<-|||| Stacktrace:									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="9"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">GetUserByUsername("kurtulusakkaya")</p> 
+								<p class="duration text-sm">0h:0m:0s+610ms</p> 
+								<span class="datetime">23:41:04 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">GetUserByUsername("kurtulusakkaya")</h5>
+										<span class='badge badge-success'>08-Sep-22 23:41:04</span>
+										<span class='badge badge-danger'>08-Sep-22 23:41:05</span>
+										<span class='badge badge-default'>0h:0m:0s+610ms</span>
+									</div>
+																	</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>23:41:05</td>
+				<td>
+Test ended with: |||||->Pass<-|||| Stacktrace:									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="10"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">UpdateUserByUsername("kurtulusakkaya")</p> 
+								<p class="duration text-sm">0h:0m:1s+841ms</p> 
+								<span class="datetime">23:41:05 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">UpdateUserByUsername("kurtulusakkaya")</h5>
+										<span class='badge badge-success'>08-Sep-22 23:41:05</span>
+										<span class='badge badge-danger'>08-Sep-22 23:41:07</span>
+										<span class='badge badge-default'>0h:0m:1s+841ms</span>
+									</div>
+																	</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>23:41:07</td>
+				<td>
+Test ended with: |||||->Pass<-|||| Stacktrace:									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="11"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">DeleteUserByUsername("kurtulusakkaya")</p> 
+								<p class="duration text-sm">0h:0m:0s+602ms</p> 
+								<span class="datetime">23:41:07 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">DeleteUserByUsername("kurtulusakkaya")</h5>
+										<span class='badge badge-success'>08-Sep-22 23:41:07</span>
+										<span class='badge badge-danger'>08-Sep-22 23:41:07</span>
+										<span class='badge badge-default'>0h:0m:0s+602ms</span>
+									</div>
+																	</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>23:41:07</td>
+				<td>
+Test ended with: |||||->Pass<-|||| Stacktrace:									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="12"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">DeleteUserByUsername2("test_8716235")</p> 
+								<p class="duration text-sm">0h:0m:0s+648ms</p> 
+								<span class="datetime">23:41:07 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">DeleteUserByUsername2("test_8716235")</h5>
+										<span class='badge badge-success'>08-Sep-22 23:41:07</span>
+										<span class='badge badge-danger'>08-Sep-22 23:41:08</span>
+										<span class='badge badge-default'>0h:0m:0s+648ms</span>
+									</div>
+																	</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>23:41:08</td>
+				<td>
+Test ended with: |||||->Pass<-|||| Stacktrace:									</td>
 			</tr>
 	</tbody>
 </table>
@@ -192,11 +401,11 @@ Test ended with: |||||->Fail<-|||| Stacktrace:    at RestSharp_Api_Automation.Te
 	                </div>
 	            </div>
 	            <div class="card-footer">
-	                <div><small data-tooltip='0%'>
-	                    <b>0</b> tests passed
+	                <div><small data-tooltip='100%'>
+	                    <b>6</b> tests passed
                     </small></div>
 	                <div>
-	                    <small data-tooltip='100%'><b>1</b> tests failed, 
+	                    <small data-tooltip='0%'><b>0</b> tests failed, 
 	                    <b data-tooltip='0%'>0</b> others
 	                    </small>
                     </div>
@@ -211,10 +420,10 @@ Test ended with: |||||->Fail<-|||| Stacktrace:    at RestSharp_Api_Automation.Te
 	                <div class="media justify-content-between">
 						<div>
 							<h6 class="card-title">Tests</h6>
-							<h2 class="font-size-28 font-weight-light">1</h2>
+							<h2 class="font-size-28 font-weight-light">6</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-								<span>0%</span>
+								<span>100%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -230,7 +439,7 @@ Test ended with: |||||->Fail<-|||| Stacktrace:    at RestSharp_Api_Automation.Te
 	                <div class="media justify-content-between">
 						<div>
 							<h6 class="card-title">Start</h6>
-							<h6 class="font-weight-light">08-Sep-22 23:01:23</h6>
+							<h6 class="font-weight-light">08-Sep-22 23:41:03</h6>
 							<span class="text-semibold text-success font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -246,7 +455,7 @@ Test ended with: |||||->Fail<-|||| Stacktrace:    at RestSharp_Api_Automation.Te
 	                <div class="media justify-content-between">
 						<div>
 							<h6 class="card-title">Duration</h6>
-							<h6 class="font-weight-light">00:00:00.8135123</h6>
+							<h6 class="font-weight-light">00:00:04.9679743</h6>
 							<span class="text-semibold text-danger font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -262,7 +471,7 @@ Test ended with: |||||->Fail<-|||| Stacktrace:    at RestSharp_Api_Automation.Te
 	                <div class="media justify-content-between">
 						<div>
 							<p class="">Duration</p>
-							<h6 class="font-weight-light">00:00:03.5941552</h6>
+							<h6 class="font-weight-light">00:00:04.9684737</h6>
 							<span class="text-semibold font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -309,14 +518,14 @@ Test ended with: |||||->Fail<-|||| Stacktrace:    at RestSharp_Api_Automation.Te
 </div>
 <script>
 	var statusGroup = {
-    parentCount: 1,
-		passParent: 0,
-		failParent: 1,
+    parentCount: 6,
+		passParent: 6,
+		failParent: 0,
 		fatalParent: 0,
 		errorParent: 0,
 		warningParent: 0,
 		skipParent: 0,
-		exceptionsParent: 1,
+		exceptionsParent: 0,
 		childCount: 0,
 		passChild: 0,
 		failChild: 0,
